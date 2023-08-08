@@ -1,0 +1,19 @@
+button{
+    min-width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--black);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button .line{
+    height: 1.5rem;
+    width: .1rem;
+    background-color: var(--textColor);
+    position: absolute;
+}
+button .line:nth-child(2) {
+    transform: rotateZ(90deg);
+}

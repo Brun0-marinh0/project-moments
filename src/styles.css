@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Lexend+Deca:wght@200;400&family=Lexend+Exa&display=swap');
+
+:root{
+    --bgMain:#2F2F2F;
+    --textColor:#CECECE;
+    --textColor_main:#FFFFFF;
+    --orange:#FF5C00;
+    --black:#1E1E1E;
+
+    --fontLG:'League Gothic', sans-serif;
+    --fontLexD:'Lexend Deca', sans-serif;
+    --fontLexEx:'Lexend Exa', sans-serif;
+}
+
+body{
+    background-color: var(--bgMain);
+    color: var(--textColor);
+    font-family: var(--fontLexD);
+}
+
+button{
+    cursor: pointer;
+    border: none;
+}
+
+.negativeSpace{
+    padding: 0 6vw;
+}

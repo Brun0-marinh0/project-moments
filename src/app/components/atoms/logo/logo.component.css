@@ -1,0 +1,12 @@
+.boxLogo{
+    display: flex;
+    gap: .5rem;
+    align-items: end;
+    height: fit-content;
+}
+h1{
+    font-family: var(--fontLexEx);
+    font-weight: 400;
+    margin: 0;
+    font-size: 1rem;
+}
