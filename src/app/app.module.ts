@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { NavbarDefaultComponent } from './components/molecules/navbar-default/navbar-default.component';
 import { LogoComponent } from './components/atoms/logo/logo.component';
 import { ButtonPlusComponent } from './components/atoms/button-plus/button-plus.component';
+import { TemplateHomeComponent } from './components/templates/template-home/template-home.component';
+import { FrameComponent } from './components/organisms/frame/frame.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarDefaultComponent,
     LogoComponent,
-    ButtonPlusComponent
+    ButtonPlusComponent,
+    TemplateHomeComponent,
+    FrameComponent
   ],
   imports: [
     BrowserModule,

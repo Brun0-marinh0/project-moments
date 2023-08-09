@@ -1,0 +1,5 @@
+.column{
+    width: 3rem;
+    height: 20rem;
+    background-color: var(--textColor);
+}

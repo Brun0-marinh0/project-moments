@@ -1,7 +1,7 @@
 .boxLogo{
     display: flex;
     gap: .5rem;
-    align-items: end;
+    align-items: flex-end;
     height: fit-content;
 }
 h1{
