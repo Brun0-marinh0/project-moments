@@ -1,8 +1,12 @@
-<main class="container">
-    <div class="list" id="list">
-        <div *ngFor="let e of [].constructor(20); let i = index">
-            <app-frame/>
-            {{i}}
+<main class="container scroll-wrapper">
+    <section>
+        <div class="scroll-container">
+            <div class="space"></div>
+            <div *ngFor="let e of [].constructor(50); let i = index" class="slide" #slideElements>
+                <div class="group myframe" #groupElements>
+                    <app-frame [index]="i"/>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 </main>
