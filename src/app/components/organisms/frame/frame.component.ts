@@ -8,7 +8,12 @@ import { Component, Input } from '@angular/core';
 export class FrameComponent {
   @Input() index: number = 0
 
-  showImage(index: number){
-    console.log(index)
+  showImage(): void {
+    const frame = document.getElementById(`${this.index}`);
+    if (frame && frame.classList.contains('show')) {
+      frame.classList.remove('show')
+    } else {
+      frame?.classList.add('show')
+    }
   }
 }

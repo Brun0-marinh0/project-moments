@@ -2,7 +2,7 @@
     <section>
         <div class="scroll-container">
             <div class="space"></div>
-            <div *ngFor="let e of [].constructor(50); let i = index" class="slide" #slideElements>
+            <div *ngFor="let e of [].constructor(5); let i = index" class="slide" #slideElements>
                 <div class="group myframe" #groupElements>
                     <app-frame [index]="i"/>
                 </div>
