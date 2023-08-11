@@ -9,7 +9,7 @@
 }
 
 
-.show{
+.selected{
     background-color: var(--orange);
     width: 40vw;
     
