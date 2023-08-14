@@ -8,9 +8,32 @@
     
 }
 
-
-.show{
+.selected{
     background-color: var(--orange);
     width: 40vw;
-    
 }
+
+.text{
+    overflow: hidden;
+}
+
+.text h2{
+    position: relative;
+    top: 0rem;
+    transition: 0.5s;
+}
+.text p{
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.text .showTitle{
+    position: relative;
+    top: 2rem;
+}
+
+.text .showDescription{
+    position: relative;
+    opacity: 0;
+}
+

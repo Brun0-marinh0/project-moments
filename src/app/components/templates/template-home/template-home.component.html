@@ -2,11 +2,12 @@
     <section>
         <div class="scroll-container">
             <div class="space"></div>
-            <div *ngFor="let e of [].constructor(5); let i = index" class="slide" #slideElements>
+            <div *ngFor="let item of items; let i = index" class="slide" #slideElements>
                 <div class="group myframe" #groupElements>
-                    <app-frame [index]="i"/>
+                    <app-frame [isSelected]="i === selectedIndex" (selected)="selectItem(i)" />
                 </div>
             </div>
         </div>
     </section>
+    <h1>rerere</h1>
 </main>

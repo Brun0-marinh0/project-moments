@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-frame',
@@ -6,14 +6,11 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./frame.component.css']
 })
 export class FrameComponent {
-  @Input() index: number = 0
+  @Input() isSelected: boolean = false;
+  @Output() selected = new EventEmitter<void>();
 
-  showImage(): void {
-    const frame = document.getElementById(`${this.index}`);
-    if (frame && frame.classList.contains('show')) {
-      frame.classList.remove('show')
-    } else {
-      frame?.classList.add('show')
-    }
+  select() {
+    this.selected.emit();
+    this.isSelected = !this.isSelected
   }
 }

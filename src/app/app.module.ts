@@ -8,6 +8,9 @@ import { LogoComponent } from './components/atoms/logo/logo.component';
 import { ButtonPlusComponent } from './components/atoms/button-plus/button-plus.component';
 import { TemplateHomeComponent } from './components/templates/template-home/template-home.component';
 import { FrameComponent } from './components/organisms/frame/frame.component';
+import { AddComponent } from './components/pages/add/add.component';
+import { HomeComponent } from './components/pages/home/home.component';
+import { TemplateFormComponent } from './components/templates/template-form/template-form.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { FrameComponent } from './components/organisms/frame/frame.component';
     LogoComponent,
     ButtonPlusComponent,
     TemplateHomeComponent,
-    FrameComponent
+    FrameComponent,
+    AddComponent,
+    HomeComponent,
+    TemplateFormComponent
   ],
   imports: [
     BrowserModule,

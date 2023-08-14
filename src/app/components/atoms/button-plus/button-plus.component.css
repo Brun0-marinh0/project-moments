@@ -6,6 +6,7 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform 0.3s ease-out;
 }
 
 button .line{
@@ -16,4 +17,11 @@ button .line{
 }
 button .line:nth-child(2) {
     transform: rotateZ(90deg);
+}
+
+.close{
+    transform: rotateZ(45deg);
+}
+.close .line{
+    background-color: var(--orange);
 }

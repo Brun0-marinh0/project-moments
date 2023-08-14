@@ -1,3 +1,11 @@
 <div class="content-column">
-    <div class="column" (click)="showImage()" [id]="index">oi</div>
+    <div class="column" [ngClass]="{'selected': isSelected}" (click)="select()" >oi</div>
+    <div class="inform">
+        <div class="text">
+            <h2 [ngClass]="{'showTitle': !isSelected}">aaaaaaaaaaaa</h2>
+        </div>
+        <div class="text">
+            <p [ngClass]="{'showDescription': !isSelected}">bbbbbbbbbbbbbbb</p>
+        </div>
+    </div>
 </div>

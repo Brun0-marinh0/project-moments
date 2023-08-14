@@ -1,9 +1,6 @@
 .scroll-wrapper{
     overflow-x: hidden;
-    
 }
-
-
 
 section {
     height: 100vh;
@@ -20,12 +17,20 @@ section .scroll-container {
 
 section .scroll-container .slide {
     height: 100vh;
-    min-width: 40rem;
+    /* min-width: 20rem;
+    width: auto; */
     display: flex;
     justify-content: center;
     align-items: center;
+    
+}
+
+.myframe{
+    width: 40rem;
+    display: flex;
+    justify-content: center;
 }
 
 .space{
-    min-width: 50rem;
+    min-width: 30vw;
 }

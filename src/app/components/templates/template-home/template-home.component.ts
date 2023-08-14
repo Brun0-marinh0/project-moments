@@ -2,13 +2,22 @@ import { Component, ElementRef, ViewChildren, QueryList  } from '@angular/core';
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
-
 @Component({
   selector: 'app-template-home',
   templateUrl: './template-home.component.html',
   styleUrls: ['./template-home.component.css']
 })
 export class TemplateHomeComponent {
+
+  items: any[] = [
+    1, 2, 3, 4, 5, 6, 7, 8
+  ];
+  selectedIndex: number = -1;
+
+  selectItem(index: number) {
+    this.selectedIndex = index;
+  }
+  // scroll
 
   @ViewChildren('groupElements', { read: ElementRef })
   groupElements!: QueryList<ElementRef>;
