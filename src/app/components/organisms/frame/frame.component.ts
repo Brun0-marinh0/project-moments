@@ -10,7 +10,7 @@ export class FrameComponent {
   @Output() selected = new EventEmitter<void>();
 
   select() {
-    
     this.selected.emit();
+    this.isSelected = !this.isSelected
   }
 }
