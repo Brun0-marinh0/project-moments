@@ -7,4 +7,10 @@ import { Component, Input } from '@angular/core';
 })
 export class TemplateFormComponent {
   @Input() btnText!: string
+
+  myImage = ''
+
+  previewImg(e: any){
+    
+  }
 }
