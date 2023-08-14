@@ -1,0 +1,31 @@
+.contentForm{
+    margin-top: 9vh;
+    padding: 3vw 6vw;
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+    width: 25rem;
+}
+.form-group{
+    display: grid;
+    gap: .3rem;
+}
+
+.form-group input[type = text], .form-group textarea{
+    border: none;
+    height: 2rem;
+    border-radius: .3rem;
+    background-color: #474747;
+    outline: none;
+    color: var(--textColor_main);
+    padding: 0.5rem;
+}
+
+.form-group textarea{
+    resize: none;
+    height: 10rem;
+}
