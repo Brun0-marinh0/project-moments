@@ -8,9 +8,18 @@ import { Component, Input } from '@angular/core';
 export class TemplateFormComponent {
   @Input() btnText!: string
 
-  myImage = ''
+  imageSrc: any
 
-  previewImg(e: any){
-    
-  }
+  readURL(event: any): void {
+    if (event.target.files && event.target.files[0]) {
+        const file = event.target.files[0];
+
+        const reader = new FileReader();
+        reader.onload = e => this.imageSrc = reader.result 
+
+        console.log(this.imageSrc)
+
+        reader.readAsDataURL(file);
+    }
+}
 }
