@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms'
 
 @Component({
   selector: 'app-template-form',
@@ -7,8 +8,25 @@ import { Component, Input } from '@angular/core';
 })
 export class TemplateFormComponent {
   @Input() btnText!: string
-
+  momentForm!: FormGroup
   imageSrc: any
+
+  ngOnInit(): void {
+    this.momentForm = new FormGroup({
+      id: new FormControl(''),
+      title: new FormControl('', [Validators.required]),
+      description: new FormControl('', [Validators.required]),
+      image: new FormControl(''),
+    })
+  }
+
+  get title() {
+    return this.momentForm.get('title')!
+  }
+
+  get description() {
+    return this.momentForm.get('description')!
+  }
 
   readURL(event: any): void {
     if (event.target.files && event.target.files[0]) {
@@ -22,4 +40,12 @@ export class TemplateFormComponent {
         reader.readAsDataURL(file);
     }
 }
+
+submit(){
+  if (this.momentForm.invalid){
+    return
+  }
+  console.log('Enviou')
+}
+
 }

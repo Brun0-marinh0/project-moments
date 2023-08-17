@@ -1,12 +1,18 @@
 <div class="contentForm">
-    <form action="">
+    <form (ngSubmit)="submit()" [formGroup]="momentForm" #formDir="ngForm" >
         <div class="form-group">
             <label for="title">Título</label>
-            <input type="text" required>
+            <input type="text" formControlName="title" required>
+            <div *ngIf="title.invalid && formDir.submitted" class="toast">
+                <p *ngIf="title.errors?.['required']">O título é obrigatório</p>
+            </div>
         </div>
         <div class="form-group">
             <label for="description">Descrição</label>
-            <textarea name="" id="" cols="30" rows="10" required></textarea>
+            <textarea name="" id="" cols="30" rows="10" formControlName="description" required ></textarea>
+            <div *ngIf="description.invalid && formDir.submitted" class="toast">
+                <p *ngIf="description.errors?.['required']">A descrição é obrigatório</p>
+            </div>
         </div>
         <div class="form-group">
             <label for="image">Coloque a foto que mais marcou:</label>
