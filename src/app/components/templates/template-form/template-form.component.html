@@ -11,8 +11,10 @@
         <div class="form-group">
             <label for="image">Coloque a foto que mais marcou:</label>
             
-            <input type='file' (change)="readURL($event);" />
-            <img id="blah" [src]="imageSrc" alt="your image" />
+            <input type='file' style="display: none;" id="image" (change)="readURL($event);" />
+            <label for="image">
+                <img id="blah" [src]="imageSrc" alt="your image" />
+            </label>
         </div>
         <input type="submit" value="{{btnText}}">
     </form>
