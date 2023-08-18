@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
+
+import { Moment } from 'src/app/Moment';
 
 @Component({
   selector: 'app-add',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./add.component.css']
 })
 export class AddComponent {
+  
+
   btnText = 'Compartilhar'
+
+  createHandler(event: any){
+    console.log("oi")
+  }
 }

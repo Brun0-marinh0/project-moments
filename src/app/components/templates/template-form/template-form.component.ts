@@ -1,5 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms'
+
+import { Moment } from 'src/app/Moment'
 
 @Component({
   selector: 'app-template-form',
@@ -8,6 +10,8 @@ import { FormGroup, FormControl, Validators } from '@angular/forms'
 })
 export class TemplateFormComponent {
   @Input() btnText!: string
+  @Output() onSubmit = new EventEmitter<Moment>()
+
   momentForm!: FormGroup
   imageSrc: any
 
@@ -30,7 +34,9 @@ export class TemplateFormComponent {
 
   readURL(event: any): void {
     if (event.target.files && event.target.files[0]) {
-        const file = event.target.files[0];
+        const file: File = event.target.files[0];
+
+        this.momentForm.patchValue({image: file})
 
         const reader = new FileReader();
         reader.onload = e => this.imageSrc = reader.result 
@@ -45,7 +51,9 @@ submit(){
   if (this.momentForm.invalid){
     return
   }
-  console.log('Enviou')
+  console.log(this.momentForm.value)
+
+  this.onSubmit.emit(this.momentForm.value)
 }
 
 }
